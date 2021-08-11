@@ -1,0 +1,33 @@
+{
+  "name": "@robertmarinescu/create-project-cli",
+  "version": "1.0.0",
+  "description": "Simple CLI to bootstrap your projects",
+  "main": "src/index.js",
+  "bin": {
+    "@robertmarinescu/create-project": "bin/create-project",
+    "create-project": "bin/create-project"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertmarinescu/create-project-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "create-project"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertmarinescu/create-project-cli/issues"
+  },
+  "homepage": "https://github.com/robertmarinescu/create-project-cli#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
