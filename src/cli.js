@@ -1,5 +1,6 @@
 import arg from 'arg'
 import inquirer from 'inquirer'
+import { createProject } from './main' 
 
 function parseArgumentsIntoOptions(rawArgs) {
     const args = arg(
@@ -15,7 +16,6 @@ function parseArgumentsIntoOptions(rawArgs) {
             argv: rawArgs.slice(2),
         }
     )
-    console.log(args)
     return {
         skipPrompts: args['--yes'] || false,
         git: args['--git'] || false,
@@ -64,5 +64,5 @@ async function promptForMissingOptions(options) {
 export async function cli(args){
     let options = parseArgumentsIntoOptions(args)
     options = await promptForMissingOptions(options)
-    console.log(options);
+    await createProject(options)
 }
